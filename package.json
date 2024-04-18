@@ -68,7 +68,7 @@
     "@unocss/webpack": "^0.58.9",
     "@vue/babel-plugin-jsx": "^1.2.2",
     "babel-preset-taro": "3.6.26",
-    "eslint": "^9.0.0",
+    "eslint": "^8.57.0",
     "eslint-config-soybeanjs": "0.5.9",
     "simple-git-hooks": "^2.11.1",
     "taro-plugin-pinia": "^1.0.0",
