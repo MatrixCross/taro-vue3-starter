@@ -1,5 +1,5 @@
 // 导入unocss
-import UnoCSS from 'unocss/webpack';
+import { createSwcRegister, getModuleDefaultExport } from '@tarojs/helper';
 import ComponentsPlugin from 'unplugin-vue-components/webpack';
 const path = require('path');
 
@@ -75,6 +75,11 @@ const config = {
     },
     // 合并webpack配置
     webpackChain(chain) {
+      // 使用createSwcRegister转换pure esm的unocss包
+      createSwcRegister({
+        only: [filePath => filePath.includes('@unocss')]
+      });
+      const UnoCSS = getModuleDefaultExport(require('@unocss/webpack'));
       chain.plugin('unocss').use(UnoCSS());
       chain.plugin('unplugin-vue-components').use(
         ComponentsPlugin({
