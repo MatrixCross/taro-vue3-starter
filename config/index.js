@@ -32,12 +32,16 @@ const config = {
     640: 2.34 / 2,
     750: 1,
     828: 1.81 / 2,
-    375: 2 / 1
+    375: 2
   },
   alias: {
     '@': path.resolve(__dirname, '..', 'src')
   },
   compiler: 'webpack5',
+  // 不开启cache热更新非常慢，页面多更新一行代码可能要十几秒，如果没有什么问题最好还是开启
+  cache: {
+    enable: true
+  },
   sourceRoot: 'src',
   outputRoot: `dist/${process.env.TARO_ENV}`,
   plugins: ['@tarojs/plugin-html', 'taro-plugin-pinia'],
