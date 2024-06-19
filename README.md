@@ -8,10 +8,10 @@ taro-vue3-pinia 是一个使用 Taro3 + Vue3 + TypeScript + NutUi + pinia + unoc
 - **TypeScript**: 应用程序级 JavaScript 的语言
 - **代码规范**：丰富的规范插件及极高的代码规范
 
-## 代码仓库
+## 创建项目
 
-- [github](https://github.com/yanbowe/taro-vue3-pinia)
-- [gitee](https://gitee.com/zhongjiancrm/taro-vue3-pinia)
+- `pnpm create matrix-starter`，选择 `vue3` ，选择 `Taro-NutUI`
+- 或者点击右上角 `Use this template` 创建项目
 
 ## Vscode 插件安装
 
